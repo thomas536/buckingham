@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Created by Massimo Di Pierro (http://experts4solutions.com) @2016 BSDv3 License                         
+# Created by Massimo Di Pierro (http://experts4solutions.com) @2016 BSDv3 License
 """
 This module implement:
 
@@ -72,7 +72,7 @@ class Fraction:
     def __float__(self):
         if self.n==0: return 0.0
         return float(self.n)/self.d
-    
+
 
 UNITS = {
     'N': (1.0,0,0,0,0,0,0), # none
@@ -102,7 +102,7 @@ UNITS = {
     'ev':(1.602176487e-16,2,-2,1,0,0,0),
     'eV':(1.602176487e-16,2,-2,1,0,0,0),
     'farad':(1000.0,-2,4,-1,2,0,0),
-    'faraday':(9.64853399e4,0,1,0,1,0,0),    
+    'faraday':(9.64853399e4,0,1,0,1,0,0),
     'foot':(381./1250,1,0,0,0,0,0),
     'hour':(3600.0,0,1,0,0,0,0),
     'henry':(1000.0,2,-2,1,-2,0,0),
@@ -309,7 +309,7 @@ class Number:
         dims = dims.replace(' ','')
         if not self.regex.match(dims):
             raise SyntaxError('Invalid Dims')
-        n = eval(dims.replace('^','**'),self.c_n) or 1        
+        n = eval(dims.replace('^','**'),self.c_n) or 1
         l = buckingham(dims,self.c_l)
         t = buckingham(dims,self.c_t)
         m = buckingham(dims,self.c_m)
@@ -553,7 +553,7 @@ class Number:
             'magnetic_flux':(2,-2,1,-2,0,0)}
         dims=self.dims
         r=''
-        while True:            
+        while True:
             n=1
             #### fix this... compute n
             y = [i/n for i in dims]
